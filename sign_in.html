@@ -1,22 +1,80 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Log In</title>
-  <link rel="stylesheet" type="text/css" href="style-sign.css">
+  <!--CSS-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 
-<body id="body-color">
-  <div id="Sign-In">
-    <fieldset style="width:30%">
-      <legend>LOG-IN HERE</legend>
-      <form method="POST" action="sign_in.php">
-        Username <br>
-        <input type="text" name="user" size="40"><br>
-        Password <br>
-        <input type="password" name="pass" size="40"><br>
-        <input id="button" type="submit" name="submit" value="Log-In">
-      </form>
-    </fieldset>
+<style>
+html{
+  height: 100%;
+}
+body{
+  background-color: #E3E7D3;
+  height: 100%;
+}
+nav{
+  background-color: #254668 !important;
+}
+.loginBox{
+  width: 30%;
+  margin-left: 35%;
+}
+.largerFont{
+  font-size: 20px;
+}
+footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem !important;
+  background-color: #254668 !important;
+}
+</style>
+
+<body>
+  <nav>
+    <div>
+      <a href="3" class="brand-logo right" id="logoFont">HMM</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="sign_in.html">Sign in</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <br><br>
+  <h1 class="center-align">Reverse Typeracer</h1> <br>
+
+  <div class="largerFont center-align" id="Sign-In">
+  <fieldset class="loginBox">
+    <legend>LOG-IN HERE</legend>
+    <form method="POST" action="sign_in.php">
+      Username <br>
+      <input type="text" name="user" size="40"><br>
+      Password <br>
+      <input type="password" name="pass" size="40"><br>
+      <input id="button" type="submit" name="submit" value="Log-In">
+    </form>
+  </fieldset>
   </div>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div>
+          <p class="grey-text text-lighten-4">COMP 426 Fall 2017 <br> Justin Ledinh, Timothy Li, Anna Xu</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
+
 </html>
