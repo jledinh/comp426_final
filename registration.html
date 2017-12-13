@@ -1,13 +1,57 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Create New Account</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<!--
   <link rel="stylesheet" type="text/css" href="">
+-->
 </head>
+<style>
+body{
+  background-color: #E3E7D3;
+  height: 100%;
+}
+nav{
+  background-color: #254668 !important;
+}
+.box{
+  width: 30%;
+  margin-left: 35%;
+}
+.largerFont{
+  font-size: 20px;
+}
+footer{
+  postion: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem !important;
+  background-color: #254668 !important;
+}
+</style>
 
 <body>
-  <div>
-    <fieldset>
+  <nav>
+    <div>
+      <a href="3" class="brand-logo right" id="logoFont">HMM</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="sign_in.html">Sign in</a></li>
+        <li><a href="registration.html">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <br><br>
+  <h1 class="center-align">Reverse Typeracer</h1><br>
+
+  <div class="largerFont center-align">
+    <fieldset class="box">
       <legend>Sign Up Here</legend>
       <form method="POST" action="registration.php">
         First Name <br>
@@ -20,9 +64,22 @@
         <input type="text" name="userName" size="40" required><br>
         Password <br>
         <input type="password" name="pass" size="40" required><br>
-        <input id="button" type="submit" name="submit" value="Create New Account">
+        <a href="/game.html"</a>
+        <button class="btn btn-large waves-effect waves-light button" type="button" name="action">Login</button>
       </form>
     </fieldset>
   </div>
+  <br><br>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div>
+          <p class="grey-text text-lighten-4">COMP 426 Fall 2017 <br> Justin Ledinh, Timothy Li, Anna Xu</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
