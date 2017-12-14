@@ -80,17 +80,18 @@ var typeRacer = function(para) {
             $('.box').each(function() {
                 $(this).empty();
             });
-            $("#first").append("<h1>Finished! Your words per minute are: "+ parseInt(wpm)+ "</h1>");
+            $("#first").append("<h1 style=\"color:#2C2554\">Finished! Your words per minute are: "+ parseInt(wpm)+ "</h1>");
             var xmlhttp = new XMLHttpRequest();
-            var params= "wpm="+parseInt(wpm)+"&date="start.toString();
+            var params= "wpm="+parseInt(wpm)+"&date="+start.toString();
             console.log(params);
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     var myObj = JSON.parse(this.responseText);
-                    typeRacer(myObj["text"]);
+                    console.log(myObj);
                   }
             };
             xmlhttp.open("POST", "submitscore.php", true);
+            xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xmlhttp.send(params);
         }
     });
