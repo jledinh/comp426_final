@@ -16,8 +16,9 @@ header("Content-Type: application/json; charset=UTF-8");
    $arr = array();
 
    if ($row->num_rows == 1) {
-     $arr["first"]=$row->fetch_assoc()["first"];
-     $arr["last"]=$row->fetch_assoc()["last"];
+     $r=$row->fetch_assoc();
+     $arr["first"]=$r["first"];
+     $arr["last"]=$r["last"];
    }
 
    $sql = "SELECT count(*) as c FROM UserName u, Scores s where u.userName = '" . $_COOKIE['user']. "' and s.userID=u.userID";

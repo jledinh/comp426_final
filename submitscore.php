@@ -5,25 +5,20 @@ header("Content-Type: application/json; charset=UTF-8");
   $password = "CH@ngemenow99Please!jledinh";
   $dbname = "jledinhdb";
   $conn = new mysqli($servername, $username, $password, $dbname);
-
   if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
   }
   session_start(); //starting the session for user profile page
-   $hash = hash('ripemd160', $_POST['pass']);
-   $sql = "SELECT * FROM UserName where userName = '" . $_POST['user']. "' AND password = '". $hash ."'";
+   $sql = "SELECT userID FROM UserName where userName = '" . $_COOKIE["user"] ."'";
    $row = $conn->query($sql);
    if ($row->num_rows == 1) {
-      $_SESSION['userID'] = $row->fetch_assoc()["userID"];
-      echo json_encode(array('status'=>200));
-      $cookie_name = "user";
-      $cookie_value = $_POST['user'];
-      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
-      header("Location: profile.html");
-    }
-    else {
-      echo json_encode(array('status'=>401,'user'=>$_POST['user']));
+      $userID = $row->fetch_assoc()["userID"];
    }
+   $date = strtotime($_POST["date"]);
+   $date = date('Y-m-d',$date);
+   $sql = "INSERT INTO Scores (userID,wpm,date) VALUES (".$userID.",".$_POST["wpm"].",'".$date."')";
+   $row = $conn->query($sql);
+   echo json_encode(array('status'=>200));
 /* $ID = $_POST['user']; $Password = $_POST['pass']; */
 
  ?>

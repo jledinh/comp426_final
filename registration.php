@@ -15,11 +15,11 @@
    $hash = hash('ripemd160', $_POST[pass]);
    $sql = "INSERT INTO UserName (userName,password,email,first,last) VALUES ('".$_POST[userName]."','".$hash."','".$_POST[email]."','".$_POST[first]."','".$_POST[last]."')";
    $row = $conn->query($sql);
-   $_SESSION['userName'] = $row->fetch_assoc()["userName"];
    $cookie_name = "user";
-   $cookie_value = $_POST['user'];
+   $cookie_value = $_POST['userName'];
    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
-   echo "yaya";
+   echo "<script type='text/javascript'>alert('help');</script>";
+   header("Location: profile.html");
   }
 /* $ID = $_POST['user']; $Password = $_POST['pass']; */
 
