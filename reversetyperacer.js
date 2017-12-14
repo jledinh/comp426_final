@@ -81,6 +81,7 @@ var typeRacer = function(para) {
                 $(this).empty();
             });
             $("#first").append("<h1 style=\"color:#2C2554\">Finished! Your words per minute are: "+ parseInt(wpm)+ "</h1>");
+            $("#mid").append("<button style=\"margin:0px\" type=\"button\" class=\"play buttonStart\"><a href=\"reversetyperacer.html\">Play Again</a></button>");
             var xmlhttp = new XMLHttpRequest();
             var params= "wpm="+parseInt(wpm)+"&date="+start.toString();
             console.log(params);
