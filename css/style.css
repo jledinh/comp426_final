@@ -27,6 +27,7 @@ html {
   text-align: left;
   padding: 8px;
   align: center;
+  color: #DDC4BC;
 }
 .lastFive{
   width: 25%;
@@ -36,9 +37,13 @@ html {
   align: left;
   margin-left: 22%;
   font-size: 20px;
+  color: #DDC4BC;
 }
 tr:nth-child(even){
-  background-color: #dddddd;f
+  background-color: #453D72;
+}
+tr:nth-child(odd){
+  background-color: #2C2554;
 }
 .play {
   font-size: 40px;
@@ -57,15 +62,19 @@ tr:nth-child(even){
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .1em;
-  background: #3993C6;
-  color: #ffffff;
+  background: #2C2554;
+  color: white !important;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-appearance: none;
 }
 
 .buttonStart:hover, .buttonStart:focus {
-  background: #2B82B3;
+  background: #453D72 !important;
+}
+
+#startGame{
+  background: #2C2554;
 }
 
 .container {
@@ -78,7 +87,7 @@ body {
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
   color: #3993C6;
   -webkit-transition: .5s ease;
   transition: .5s ease;
@@ -255,4 +264,8 @@ textarea {
 .forgot {
   margin-top: -20px;
   text-align: right;
+}
+
+#plsnowhite {
+  background: #2C2554;
 }
