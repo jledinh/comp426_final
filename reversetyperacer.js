@@ -21,7 +21,7 @@ var reverseSplitPara = function(para) {
 }
 
 function checkOnKeypress(event, array) {
-   
+
 }
 
 var typeRacer = function(para) {
@@ -81,10 +81,17 @@ var typeRacer = function(para) {
                 $(this).empty();
             });
             $("#first").append("<h1>Finished! Your words per minute are: "+ parseInt(wpm)+ "</h1>");
+            var xmlhttp = new XMLHttpRequest();
+            var params= "wpm="+parseInt(wpm)+"&date="start.toString();
+            console.log(params);
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myObj = JSON.parse(this.responseText);
+                    typeRacer(myObj["text"]);
+                  }
+            };
+            xmlhttp.open("POST", "submitscore.php", true);
+            xmlhttp.send(params);
         }
     });
 }
-
-
-
-
