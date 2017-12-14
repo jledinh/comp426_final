@@ -5,11 +5,20 @@ $( document ).ready(function() {
           var myObj = JSON.parse(this.responseText);
           console.log(myObj);
           $(".center-align").text("Welcome, "+myObj["first"]+" "+myObj["last"]);
-          $("#high").text("Highest Score: "+myObj["max"]);
-          $("#avg").text("Average Score: "+myObj["avg"]);
+          if (myObj["max"]!= null) {
+            $("#high").text("Highest Score: "+myObj["max"]);
+          }
+          if (myObj["max"]!= null) {
+            $("#avg").text("Average Score: "+myObj["avg"]);
+          }
           $("#tot").text("Total game played: "+myObj["count"]);
-          for (var i=0; i <myObj["games"].length;i++) {
-            $(".lastFive").append("<tr><th>"+ myObj["games"][i]["date"] +"</th><th>"+ myObj["games"][i]["wpm"] +"</th></tr>")
+          if (myObj["games"][i]!= null) {
+            for (var i=0; i <myObj["games"].length;i++) {
+              $(".lastFive").append("<tr><th>"+ myObj["games"][i]["date"] +"</th><th>"+ myObj["games"][i]["wpm"] +"</th></tr>");
+            }
+          }
+          else {
+            $(".lastFive").append("<tr><th>"+ " " +"</th><th>"+ " " +"</th></tr>");
           }
         }
   };

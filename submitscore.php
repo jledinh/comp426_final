@@ -16,10 +16,7 @@ header("Content-Type: application/json; charset=UTF-8");
    if ($row->num_rows == 1) {
       $_SESSION['userID'] = $row->fetch_assoc()["userID"];
       echo json_encode(array('status'=>200));
-      $cookie_name = "user";
-      $cookie_value = $_POST['user'];
-      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
-      header("Location: profile.html");
+      header("Location: welcome.html");
     }
     else {
       echo json_encode(array('status'=>401,'user'=>$_POST['user']));
