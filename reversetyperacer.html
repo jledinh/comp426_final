@@ -1,15 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Reverse Type Racer</title>
         <script src="jquery-3.2.1.js"></script>
         <script src = "reversetyperacer.js"></script>
         <link rel="stylesheet" type="text/css" href="reversetyperacer.css">
-    </head>
 
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Log In</title>
+
+        <!--CSS-->
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/sign_in.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+        <!--internettt-->
+
+        <meta charset="UTF-8">
+        <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+            <link rel="stylesheet" href="css/style.css">
+
+    </head>
     <body>
+      <!--navbar-->
+      <nav>
+        <div>
+          <a href="3" class="brand-logo right" id="logoFont"><i class="large material-icons">keyboard</i></a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="profile.html">Home</a></li>
+            <li><a href="scoreboard.html">Scoreboard</a></li>
+            <li><a href="sign_in.html">Sign Out</a></li>
+          </ul>
+        </div>
+      </nav>
+
+        <br><br>
         <div class="box" id="first"></div>
-        <div class="box"></div> 
+        <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
@@ -20,16 +52,27 @@
 
         <textarea onFocus="this.value=''" id='input-box'>Type the text above here, but reverse each word.</textarea>
         <h1 id="wpm">Words Per Minute: </h1>
+        <br><br><br><br><br><br><br>
+
+        <!--footer-->
+        <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div>
+                <p class="grey-text text-lighten-4">COMP 426 Fall 2017 <br> <br>Justin Ledinh, Timothy Li, Anna Xu</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+
     </body>
 
     <script>
         $(document).ready(function(){
-            
             typeRacer(
                 "Hi how are you?"
             );
         })
-        
     </script>
 
 </html>
