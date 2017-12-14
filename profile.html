@@ -18,35 +18,31 @@
       <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="title">
   <nav>
     <div>
-      <a href="3" class="brand-logo right" id="logoFont">HMM</a>
+      <a href="3" class="brand-logo right" id="logoFont"><i class="large material-icons">keyboard</i></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="sign_in.html">Home</a></li>
+        <li><a href="profile.html">Home</a></li>
         <li><a href="scoreboard.html">Scoreboard</a></li>
-        <li><a href="registration.html">Sign Out</a></li>
+        <li><a href="sign_in.html">Sign Out</a></li>
       </ul>
     </div>
   </nav>
-  <br><br>
+  <br>
 
-  <h2 class="center-align">Welcome!</h2>
+  <h2 class="center-align">Welcome, First Last!</h2>
+  <br>
+  <button type="button" class="play buttonStart">Start Game</button>
 
-  <button type="button" class="play">Start Game</button>
-
-  <h1> firstName lastName </h1>
-  <h1> Highest score: </h1>
-
-  <h1> Average score: </h1>
-
-
-  <h1> Total games played: </h1>
-
-  <h1> Last 5 games: </h1>
-    <table class="lastFive" align="center">
+  <h1 class="name"> Your Statistics </h1>
+  <h1 class="stat"> Highest score: </h1>
+  <h1 class="stat"> Average score: </h1>
+  <h1 class="stat"> Total games played: </h1>
+  <h1 class="stat"> Last 5 games </h1>
+    <table class="lastFive">
       <tr>
-        <th>date</th>
+        <th>Date</th>
         <th>Score</th>
       </tr>
       <tr>
@@ -70,8 +66,6 @@
         <td>82</td>
       </tr>
     </table>
-
-
 <br>
 
   <footer class="page-footer">
