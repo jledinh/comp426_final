@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reverse Type Racer</title>
+        <script src="jquery-3.2.1.js"></script>
+        <script src = "reversetyperacer.js"></script>
+        <link rel="stylesheet" type="text/css" href="reversetyperacer.css">
+    </head>
+
+    <body>
+        <div class="box" id="first"></div>
+        <div class="box"></div> 
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+        <textarea onFocus="this.value=''" id='input-box'>Type the text above here, but reverse each word.</textarea>
+        <h1 id="wpm">Words Per Minute: </h1>
+    </body>
+
+    <script>
+        $(document).ready(function(){
+            
+            typeRacer(
+                "Hi how are you?"
+            );
+        })
+        
+    </script>
+
+</html>
