@@ -9,7 +9,8 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/sign_in.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="profile.js"></script>
   <!--internettt-->
   <meta charset="UTF-8">
   <title>Sign-Up/Login Form</title>
@@ -36,34 +37,16 @@
   <button type="button" class="play buttonStart">Start Game</button>
 
   <h1 class="name"> Your Statistics </h1>
-  <h1 class="stat"> Highest score: </h1>
-  <h1 class="stat"> Average score: </h1>
-  <h1 class="stat"> Total games played: </h1>
-  <h1 class="stat"> Last 5 games </h1>
+
+  <h1 class="stat" id="high"> Highest score: </h1>
+  <h1 class="stat" id="avg"> Average score: </h1>
+  <h1 class="stat" id="tot"> Total games played: </h1>
+  <h1 class="stat" id="last"> Last 5 games </h1>
+
     <table class="lastFive">
       <tr>
         <th>Date</th>
         <th>Score</th>
-      </tr>
-      <tr>
-        <td>Jan4</td>
-        <td>32</td>
-      </tr>
-      <tr>
-        <td>Jan23</td>
-        <td>28</td>
-      </tr>
-      <tr>
-        <td>Jan31</td>
-        <td>43</td>
-      </tr>
-      <tr>
-        <td>Feb3</td>
-        <td>59</td>
-      </tr>
-      <tr>
-        <td>Feb8</td>
-        <td>82</td>
       </tr>
     </table>
 <br>
